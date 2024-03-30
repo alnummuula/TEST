@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCUMENTS | ACOGRE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .document-item {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .download-icon {
+            float: right;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        hr {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="logo.png" alt="SAINT DU ROI | EDUCATION" class="logo">
+        </div>
+        <div class="header-center">
+            <div id="userPreferences"></div>
+            <span id="logoutIcon" class="logout-icon" title="DÉCONNEXION"></span>
+        </div>
+        <div class="header-right">
+            <p>SAINT DU ROI | ÉDUCATION</p>
+        </div>
+    </header>
+    <div class="navbar">
+        <a href="accueil.html">ACCUEIL</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="window.location.href='test.html';">NOTES*</button>
+            <div class="dropdown-content">
+                <a href="notes.html">NOTES*</a>
+                <a href="notes.html#moyenne">MOYENNE*</a>
+                <a href="notes.html#compétences">COMPÉTENCES*</a>
+                <a href="notes.html#bulletins">BULLETINS*</a>
+            </div>
+        </div>
+        <a href="test.html">EMPLOI DU TEMPS*</a>
+        <a href="test.html">CAHIER DE TEXTE*</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="window.location.href='messagerie.html';">MESSAGERIE*</button>
+            <div class="dropdown-content">
+                <a href="messagerie.html#boite-de-reception">BOITE DE RÉCEPTION*</a>
+                <a href="messagerie.html#brouillons">BROUILLONS*</a>
+                <a href="messagerie.html#messages-envoyes">MESSAGES ENVOYÉS*</a>                             
+            </div>
+        </div>
+        <a href="documents.html">DOCUMENTS</a>
+        <a href="test.html">VIE SCOLAIRE*</a>
+        <a href="test.html">RÉUNION PARENTS/PROFESSEURS*</a>
+    </div>
+    
+    <div class="container">
+        <div id="administratifsDocuments">
+            <h2>ADMINISTRATIFS</h2>
+            <div id="administratifDocuments"></div>
+        </div>
+        <div id="notesDocuments">
+            <h2>NOTES</h2>
+            <div id="notesDocuments"></div>
+        </div>
+        <div id="vieScolaireDocuments">
+            <h2>VIE SCOLAIRE</h2>
+            <div id="vieScolaireDocuments"></div>
+        </div>
+    </div>
+
+    <button id="boutonrond">+</button>
+    <div id="popup" style="display: none;">
+        <span class="close" id="closePopup">&times;</span>
+        <h2 style="text-align: center;">AJOUTER UN DOCUMENT</h2>
+        <form id="addDocumentForm">
+            <label for="selectUser">UTILISATEUR :</label>
+            <select id="destinataires" required>
+                <!-- Options pour sélectionner l'utilisateur -->
+            </select>
+            <div id="destinataires-selectionnes"></div>
+            <br>
+            <label for="documentTitle">TITRE :</label>
+            <input type="text" id="documentTitle" required>
+            <br>
+            <label for="selectCategory">CATÉGORIE :</label>
+            <select id="selectCategory" required>
+                <option value="ADMINISTRATIFS">ADMINISTRATIFS</option>
+                <option value="NOTES">NOTES</option>
+                <option value="VIE SCOLAIRE">VIE SCOLAIRE</option>
+            </select>
+            <br><br>
+            <label for="selectFile">FICHIER :</label>
+            <input type="file" id="selectFile" accept=".pdf,.doc,.docx,.txt" required>
+            <br><br>
+            <button type="submit">AJOUTER LE DOCUMENT</button>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

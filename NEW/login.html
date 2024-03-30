@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNEXION | ACOGRE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="SAINT DU ROI | EDUCATION" class="logo">
+        <h2>CONNEXION</h2>
+        <p>SAINT DU ROI | ÉDUCATION</p>
+    </header>
+<div class="container">
+    <div class="login-form">
+        <h2 style="text-align: center;">CONNEXION</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">NOM D'UTILISATEUR :</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="numero">NUMÉRO :</label>
+                <input type="text" id="numero" name="numero" pattern="[0-9]{6}" title="Le numéro doit contenir 6 chiffres" required>
+            </div>
+            <div class="form-group">
+                <label for="password">MOT DE PASSE :</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">CONNEXION</button>
+        </form>
+    </div>
+    <div class="info">
+        <h2 style="text-align: center;">C'EST QUOI ACOGRE ?</h2>
+        <p>
+            ACOGRE, mis en place dans les établissements SAINT DU ROI, est une plateforme de communication qui révolutionne les interactions entre l'établissement et les familles.<br><br>
+
+            Conçue pour simplifier et améliorer les échanges, ACOGRE offre un accès facile et rapide aux informations essentielles concernant la vie scolaire. Du cahier de texte à la messagerie en passant par la transmission de documents, l'emploi du temps et les notes, ACOGRE centralise toutes les données importantes au même endroit, offrant ainsi un environnement numérique optimal pour les élèves, les enseignants, le personnel administratif et les parents.<br><br>
+
+            Grâce à ses fonctionnalités intuitives et complètes, ACOGRE vise à améliorer la communication, la collaboration et la gestion quotidienne au sein de l'établissement, tout en offrant une expérience utilisateur optimale pour tous les utilisateurs.
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
